@@ -1,0 +1,13 @@
+<div class="container text-center pt-5 px-0 w-50">
+  <div class="d-flex justify-content-between mb-2">
+    <h1>Restaurants</h1>
+    <p><%= link_to "Create restaurant", new_restaurant_path, class: "btn btn-primary" %></p>
+  </div>
+  <div>
+    <ul class="list-group">
+      <% @restaurants.each do |restaurant| %>
+      <li class="list-group-item py-3"><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
